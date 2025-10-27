@@ -1,100 +1,72 @@
 body {
-  margin:0;
-  padding:0;
-  background: radial-gradient(circle at top,#0c0c1f,#000);
-  font-family: 'Orbitron', sans-serif;
-  color: #0ff;
-  overflow-x: hidden;
+  background-color: #FFFFFF;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
-h1{
-  text-align:center;
-  margin:15px;
-  font-size:2.5em;
-  text-shadow:0 0 10px #0ff;
+h1, h2 {
+  color: #5AC8FA;
+  text-align: center;
+  margin: 20px 0;
 }
 
-.resources, .upgrades, .planets, .conversion, .tech {
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:15px;
-  margin:20px;
+.resources, .upgrades, .planets, .missions, .tech, .prestige, .achievements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px;
 }
 
 .card {
-  background:rgba(0,255,255,0.05);
-  border:1px solid #0ff;
-  border-radius:15px;
-  padding:20px;
-  width:150px;
-  text-align:center;
-  position:relative;
-  transition:transform 0.2s ease;
+  background-color: #f9f9f9;
+  border: 2px solid #5AC8FA;
+  border-radius: 15px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card:hover{
-  transform:scale(1.05);
-  box-shadow:0 0 15px #0ff;
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(90,200,250,0.3);
 }
-
-.card h2{margin:5px 0;font-size:1.3em;}
-.card p{font-size:1.2em;margin:10px 0;}
 
 button {
-  background:#0ff;
-  border:none;
-  border-radius:5px;
-  padding:6px 12px;
-  font-weight:bold;
-  cursor:pointer;
-  transition:0.2s;
+  background-color: #5AC8FA;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
-button:hover{background:#0cc;}
-button:disabled{background:#033;color:#0ff;cursor:not-allowed;}
-
-.floating{
-  position:absolute;
-  font-weight:bold;
-  pointer-events:none;
-  user-select:none;
-  color:#0ff;
-  text-shadow:0 0 5px #0ff;
-  animation:floatUp 1s ease-out forwards;
+button:hover {
+  background-color: #3AA0D9;
 }
 
-@keyframes floatUp{
-  0%{opacity:1;transform:translateY(0) scale(1);}
-  100%{opacity:0;transform:translateY(-50px) scale(1.2);}
+button:disabled {
+  background-color: #C0E7FF;
+  cursor: not-allowed;
 }
 
-.planet-btn{
-  margin:5px;
-  padding:8px 15px;
-  border-radius:10px;
-  border:1px solid #0ff;
-  background:rgba(0,255,255,0.1);
-  cursor:pointer;
-  font-weight:bold;
-  transition:0.2s;
+.floating {
+  position: absolute;
+  font-weight: bold;
+  pointer-events: none;
+  user-select: none;
+  color: #5AC8FA;
+  text-shadow: 0 0 5px #5AC8FA;
+  animation: floatUp 1s ease-out forwards;
 }
 
-.planet-btn:hover{background:rgba(0,255,255,0.3);}
-
-#progressBar{
-  width:200px;
-  height:15px;
-  border:1px solid #0ff;
-  border-radius:10px;
-  background:rgba(0,255,255,0.1);
-  margin:10px auto;
-  overflow:hidden;
-}
-
-#progressFill{
-  height:100%;
-  width:0%;
-  background:#0ff;
-  transition:width 0.3s ease;
+@keyframes floatUp {
+  0% {opacity: 1; transform: translateY(0) scale(1);}
+  100% {opacity: 0; transform: translateY(-50px) scale(1.2);}
 }

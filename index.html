@@ -3,46 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Space Company Idle</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+<title>Space Company Idle – Deep Edition</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>🚀 Space Company Idle</h1>
 
-<div class="resources">
-  <div class="card"><h2>⚡ Energy</h2><p id="energy">0</p><button onclick="collect('energy',1)">Collect Energy</button></div>
-  <div class="card"><h2>⛏️ Metal</h2><p id="metal">0</p><button onclick="collect('metal',1)">Mine Metal</button></div>
-  <div class="card"><h2>💎 Crystal</h2><p id="crystal">0</p><button onclick="collect('crystal',1)">Mine Crystal</button></div>
-  <div class="card"><h2>🔬 Science</h2><p id="science">0</p><button onclick="collect('science',0)">Research</button></div>
+<h1>🚀 Space Company Idle – Deep Edition</h1>
+
+<div id="resources" class="resources"></div>
+<div id="upgrades" class="upgrades"></div>
+<div id="planets" class="planets"></div>
+<div id="missions" class="missions">
+  <h2>Missions & Events</h2>
+</div>
+<div id="tech" class="tech"></div>
+<div id="prestige" class="prestige">
+  <button onclick="prestige()">Prestige 🌌</button>
+  <p id="prestigeBonus">Prestige Bonus: x1</p>
+</div>
+<div id="achievements" class="achievements">
+  <h2>Achievements</h2>
+  <ul id="achievementList"></ul>
 </div>
 
-<div class="upgrades">
-  <div class="card"><h2>Solar Panel</h2><p>Generates Energy</p><button onclick="buyUpgrade('solarPanel')">Buy (10 Metal)</button></div>
-  <div class="card"><h2>Miner Drone</h2><p>Generates Metal</p><button onclick="buyUpgrade('minerDrone')">Buy (20 Energy)</button></div>
-  <div class="card"><h2>Crystal Lab</h2><p>Generates Crystal</p><button onclick="buyUpgrade('crystalLab')">Buy (50 Metal)</button></div>
-  <div class="card"><h2>Research Lab</h2><p>Generates Science</p><button onclick="buyUpgrade('researchLab')">Buy (50 Crystal)</button></div>
-</div>
-
-<div class="conversion">
-  <div class="card"><h2>Metal → Crystal</h2><p>Convert 10 Metal → 1 Crystal</p><button onclick="convert('metal')">Convert</button></div>
-  <div class="card"><h2>Energy → Science</h2><p>Convert 5 Energy → 1 Science</p><button onclick="convert('energy')">Convert</button></div>
-</div>
-
-<div class="planets">
-  <h2>Planets</h2>
-  <button class="planet-btn" onclick="changePlanet('Earth')">Earth</button>
-  <button class="planet-btn" onclick="changePlanet('Moon')">Moon (100 Metal)</button>
-  <button class="planet-btn" onclick="changePlanet('Mars')">Mars (200 Crystal)</button>
-  <button class="planet-btn" onclick="changePlanet('Jupiter')">Jupiter (500 Science)</button>
-  <div id="progressBar"><div id="progressFill"></div></div>
-</div>
-
-<div class="tech">
-  <div class="card"><h2>Advanced Mining</h2><p>Metal production x2</p><button onclick="unlockTech('mining')">Unlock (100 Science)</button></div>
-  <div class="card"><h2>Solar Efficiency</h2><p>Energy production x2</p><button onclick="unlockTech('solar')">Unlock (100 Science)</button></div>
-</div>
-
+<script src="data.js"></script>
+<script src="utils.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
