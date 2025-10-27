@@ -1,72 +1,41 @@
 body {
-  background-color: #FFFFFF;
-  font-family: 'Arial', sans-serif;
-  color: #333;
-  margin: 0;
-  padding: 0;
+  background-color: white;
+  color: #003366;
+  font-family: Arial, sans-serif;
+  margin: 10px;
 }
 
-h1, h2 {
-  color: #5AC8FA;
+h1 {
   text-align: center;
-  margin: 20px 0;
+  color: #0055aa;
 }
 
-.resources, .upgrades, .planets, .missions, .tech, .prestige, .achievements {
+.resources, .upgrades, .planets, .tech, .missions, .trade {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin: 20px;
+  gap: 10px;
+  margin: 10px 0;
 }
 
 .card {
-  background-color: #f9f9f9;
-  border: 2px solid #5AC8FA;
-  border-radius: 15px;
-  padding: 20px;
-  width: 200px;
+  background-color: #e6f0ff;
+  border: 1px solid #99c2ff;
+  border-radius: 5px;
+  padding: 10px;
+  min-width: 150px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(90,200,250,0.3);
 }
 
 button {
-  background-color: #5AC8FA;
+  padding: 5px 10px;
+  border-radius: 3px;
   border: none;
-  border-radius: 8px;
-  padding: 8px 16px;
-  color: #fff;
-  font-weight: bold;
+  background-color: #66a3ff;
+  color: white;
   cursor: pointer;
-  transition: background 0.2s;
-}
-
-button:hover {
-  background-color: #3AA0D9;
 }
 
 button:disabled {
-  background-color: #C0E7FF;
+  background-color: #cccccc;
   cursor: not-allowed;
-}
-
-.floating {
-  position: absolute;
-  font-weight: bold;
-  pointer-events: none;
-  user-select: none;
-  color: #5AC8FA;
-  text-shadow: 0 0 5px #5AC8FA;
-  animation: floatUp 1s ease-out forwards;
-}
-
-@keyframes floatUp {
-  0% {opacity: 1; transform: translateY(0) scale(1);}
-  100% {opacity: 0; transform: translateY(-50px) scale(1.2);}
 }
